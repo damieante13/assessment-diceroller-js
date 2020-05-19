@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+</head>
+<body>
+
+    <!-- limit 100 die -->
+    <label for="number-of-dice">Enter the Number of Dice:</label>
+    <input type="number" name="number-of-dice" id="number-of-dice" placeholder="(1-100)"
+    min="1" max="100">
+    
+    <button id="roll-button">Roll!</button>
+
+    <span id="total-of-roll">0</span>
+
+    <button id="show-all-rolls">Show All Rolls</button>
+
+    <ol id="all-rolls">   
+    </ol>
+
+
+    <script src="./assets/javascript/main.js"></script>
+</body>
+</html>

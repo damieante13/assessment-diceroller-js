@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
+#number-of-dice{
+    width: 5.5em;
+}
