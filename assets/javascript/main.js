@@ -1,25 +1,63 @@
+//dwight shouts
 const rollButton=document.querySelector("#roll-button");
 const numberOfDice=document.querySelector("#number-of-dice");
-const outputElement = document.querySelector("#total-of-roll");
+const outputElement=document.querySelector("#total-of-roll");
+const showAllRolls=document.querySelector("#show-all-rolls");
+const allRolls=document.querySelector("#all-rolls");
+const sidesDieInput=document.querySelector("#side-of-die");
+const reset=document.querySelector("#reset");
 
-//  list of each die that has been rolled
+
+//  list of each die that has been rolled in new array
 const dieRolls=[];
+//counter
 let numberToRoll=0;
+//die sides -- 6 default
+let sidesDie=6;
 
- rollButton.addEventListener("click", function(){
+//event listen1
+rollButton.addEventListener("click", function(){
+     //take user input
     numberToRoll = numberOfDice.value;
-     
-    while (numberToRoll < 101){
-    //const diceRolledValue= Math.floor(Math.random()*6)+1;
-     //const diceTotal=0;
-     console.log(numberToRoll);
-     numberToRoll ++; 
+    //take sides user input
+    sidesDie=sidesDieInput.value;
+    
+    //max no# is 100
+    for (let counter=0; counter<numberToRoll; counter+=1){
+   //random number and push to array
+        dieRolls.push( Math.floor(Math.random()*sidesDie)+1);
     }
-//outputElement.innerHTML=diceTotal;    
- })
 
+//dice total    
+let sumDice=0;
 
+for (let i=0; i<dieRolls.length; i+=1){
+    sumDice += dieRolls[i];
+}
+outputElement.innerHTML=sumDice; 
 
+})
+
+//event listen2 show all dice values
+showAllRolls.addEventListener("click", function(){
+//cite found dice icon here https://stackoverflow.com/questions/31084430/how-to-roll-multiple-dice-using-a-for-loop
+for(let i=0; i<dieRolls.length; i+=1){
+    allRolls.innerHTML+="<li>" + "&#x268" + dieRolls[i] + "</li>";
+}
+
+})
+
+//event listen3 reset
+reset.addEventListener("click", function(){
+    numberToRoll=0;
+    let sumDice=0;
+    numberOfDice.value=0;
+    sidesDieInput.value=0;
+    sidesDie=6;
+    outputElement.innerHTML=0
+    allRolls.innerHTML=""
+    dieRolls.length=0;
+})
 
 // Then you need to roll the dice. It is time to write a loop. 
 // Use Math.random() to simulate rolling a single six-sided die X number of times,

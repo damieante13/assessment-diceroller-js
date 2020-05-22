@@ -8,21 +8,29 @@
 </head>
 <body>
 
-    <!-- limit 100 die -->
-    <label for="number-of-dice">Enter the Number of Dice:</label>
+    <!-- limit 100 die || 20 sides-->
+     <label for="sides-of-die"> <h3>Enter Number of Sides:</h3> </label>
+    <input type="number" name="side-of-die" id="side-of-die" placeholder="(6-20)"
+    min="6" max="20">
+    
+    <label for="number-of-dice"> <h3>Enter the Number of Dice:</h3> </label>
     <input type="number" name="number-of-dice" id="number-of-dice" placeholder="(1-100)"
     min="1" max="100">
+
+   
+
     
     <button id="roll-button">Roll!</button>
+    <h3>Roll Total</h3>
+    <span id="total-of-roll">0</span><br>
 
-    <span id="total-of-roll">0</span>
-
-    <button id="show-all-rolls">Show All Rolls</button>
-
+    <button id="show-all-rolls">Show All Rolls</button> <br>
+<h3>All Dice Values</h3>
     <ol id="all-rolls">   
     </ol>
 
+    <button id="reset" href="#">Reset</button>
 
     <script src="./assets/javascript/main.js"></script>
-</body>
+</body> 
 </html>
