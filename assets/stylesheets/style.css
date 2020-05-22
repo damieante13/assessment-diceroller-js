@@ -4,7 +4,11 @@
 }
 
 body{
+     background-image: url("../images/one-dice-clipart-free-clipart-images.png");
+    background-repeat: no-repeat;
     background-color: #08645f;
+    background-size: cover;
+  
     font-family: 'Playfair Display', serif;
     font-family: 'Della Respira', serif;
     font-family: 'Playfair Display SC', serif;
@@ -13,24 +17,23 @@ div{
     padding: 1em;
 }
 
-#container{
+#container {
     display:flex;
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 20px;
     border: 2px solid yellow;
-
+    border-radius: 15px;
+    min-height: 800px;
 }
 
-#background {
-    /* background-image: url("../images/one-dice-clipart-free-clipart-images.png");
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: contain;*/
-    border: 2px solid yellow; 
-    align-self: center;
-    min-height: 300px;
-    flex-basis: 300px;
 
+#input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 }
 
 #number-of-dice{
@@ -47,26 +50,36 @@ h3, h1 {
 }
 
 li{
+    font-size: 2em;
     color: antiquewhite;
 }
 #total-of-roll{
+    font-size: 2.5em;
     color: antiquewhite;
 }
-
+#sum-totals {
+    text-align: center;
+}
 #input{
     border: 2px solid yellow;
+    
 }
 #roll-btn{
     border: 2px solid yellow;
+    align-self: center;
     
 }
 #sum-totals{
     border: 2px solid yellow;
+    min-height: 80px;
 }
 
 #show-details{
-    border: 2px solid yellow;    
+    border: 2px solid yellow;  
+   text-align: center;
     }
-    #reset{
+
+#reset-btn{
         border: 2px solid yellow;
+        align-self: flex-end;
     }

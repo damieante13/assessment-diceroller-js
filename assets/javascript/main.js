@@ -35,15 +35,13 @@ for (let i=0; i<dieRolls.length; i+=1){
     sumDice += dieRolls[i];
 }
 outputElement.innerHTML=sumDice; 
-
 })
 
 //event listen2 show all dice values
 showAllRolls.addEventListener("click", function(){
-for(let i=0; i<dieRolls.length; i+=1){
-    allRolls.innerHTML+="<li>" + dieRolls[i] + "</li>";
-}
-
+    for(let i=0; i<dieRolls.length; i+=1){
+        allRolls.innerHTML+="<li>" + dieRolls[i] + "</li>";
+    }
 })
 
 //event listen3 reset
