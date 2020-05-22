@@ -1,10 +1,72 @@
 *{
     box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css?family=Della+Respira|Playfair+Display|Playfair+Display+SC&display=swap');
+}
+
+body{
+    background-color: #08645f;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Della Respira', serif;
+    font-family: 'Playfair Display SC', serif;
+}
+div{
+    padding: 1em;
+}
+
+#container{
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 2px solid yellow;
+
+}
+
+#background {
+    /* background-image: url("../images/one-dice-clipart-free-clipart-images.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;*/
+    border: 2px solid yellow; 
+    align-self: center;
+    min-height: 300px;
+    flex-basis: 300px;
+
 }
 
 #number-of-dice{
     width: 5.5em;
 }
+
 #side-of-die{
     width: 5em;
 }
+
+h3, h1 {
+    color: antiquewhite;
+    
+}
+
+li{
+    color: antiquewhite;
+}
+#total-of-roll{
+    color: antiquewhite;
+}
+
+#input{
+    border: 2px solid yellow;
+}
+#roll-btn{
+    border: 2px solid yellow;
+    
+}
+#sum-totals{
+    border: 2px solid yellow;
+}
+
+#show-details{
+    border: 2px solid yellow;    
+    }
+    #reset{
+        border: 2px solid yellow;
+    }

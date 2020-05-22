@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
 </head>
 <body>
-
+<div id="container">
+<h1>Dice Roller</h1>
+    <div id="input">
     <!-- limit 100 die || 20 sides-->
      <label for="sides-of-die"> <h3>Enter Number of Sides:</h3> </label>
     <input type="number" name="side-of-die" id="side-of-die" placeholder="(6-20)"
@@ -16,21 +18,34 @@
     <label for="number-of-dice"> <h3>Enter the Number of Dice:</h3> </label>
     <input type="number" name="number-of-dice" id="number-of-dice" placeholder="(1-100)"
     min="1" max="100">
+    </div>
 
-   
-
-    
+    <div id="roll-btn">
     <button id="roll-button">Roll!</button>
+    </div>
+
+    <div id="sum-totals">
     <h3>Roll Total</h3>
-    <span id="total-of-roll">0</span><br>
+    <span id="total-of-roll">0</span>
+    </div>
 
+    <div id="show-details">
     <button id="show-all-rolls">Show All Rolls</button> <br>
-<h3>All Dice Values</h3>
-    <ol id="all-rolls">   
-    </ol>
+    
+        <div id="result-list">
+        <h3>All Dice Values</h3>
+        <ol id="all-rolls">   
+        </ol>
+        </div>
+    </div>
 
+
+    <div id="reset-btn">
     <button id="reset" href="#">Reset</button>
+    </div>
 
+    <div id="background"> background</div>
+</div>
     <script src="./assets/javascript/main.js"></script>
 </body> 
 </html>

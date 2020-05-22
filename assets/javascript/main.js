@@ -40,9 +40,8 @@ outputElement.innerHTML=sumDice;
 
 //event listen2 show all dice values
 showAllRolls.addEventListener("click", function(){
-//cite found dice icon here https://stackoverflow.com/questions/31084430/how-to-roll-multiple-dice-using-a-for-loop
 for(let i=0; i<dieRolls.length; i+=1){
-    allRolls.innerHTML+="<li>" + "&#x268" + dieRolls[i] + "</li>";
+    allRolls.innerHTML+="<li>" + dieRolls[i] + "</li>";
 }
 
 })
